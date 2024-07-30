@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct wk4App: App {
@@ -13,5 +14,6 @@ struct wk4App: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Message.self, Drawing.self])
     }
 }
