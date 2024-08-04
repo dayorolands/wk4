@@ -33,7 +33,7 @@ struct DrawingCanvasView: View {
             ZStack {
                 Canvas { context, size in
                     for drawing in drawings {
-                        let path = Path { path in
+                        _ = Path { path in
                             path.addLines(drawing.points)
                             context.stroke(path, with: .color(Color.black), lineWidth: 2)
                         }
